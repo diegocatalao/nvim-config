@@ -1,0 +1,48 @@
+# plugin manager
+lazy-lock.json
+plugin/
+
+# cache, logs and states
+.cache/
+log/
+shada/
+spell/
+view/
+undo/
+
+# sessions
+sessions/
+
+# treesitter
+parser/
+queries/
+
+# lsp and meson files
+mason/
+lsp_servers/
+null-ls/
+
+dap/
+
+# operating system and editor
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+*.bak
+*.tmp
+
+# backup files
+*~
+*.orig
+
+# test / build
+node_modules/
+dist/
+build/
+
+# git
+.git/
+.gitmodules
+
