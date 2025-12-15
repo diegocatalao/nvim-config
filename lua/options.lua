@@ -1,6 +1,6 @@
 require "nvchad.options"
 
--- add yours here!
+-- this is the main pattern for all projects
+-- but not for C, i just use my own properties
+vim.opt.colorcolumn = "80"
 
--- local o = vim.o
--- o.cursorlineopt ='both' -- to enable cursorline!
