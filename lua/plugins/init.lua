@@ -1,5 +1,17 @@
 return {
   { import = "nvchad.blink.lazyspec" },
+  -- i just want this to select one or more lines
+  -- good for lazy minds like myself
+  {
+    "mg979/vim-visual-multi",
+    event = "BufReadPost",
+    init = function()
+      vim.g.VM_maps = {
+        ["Find Under"] = "<C-d>",
+        ["Find Subword Under"] = "<C-d>",
+      }
+    end,
+  },
   --
   -- gitgraph to see the branches like gitkraken
   -- nice to visualize the connections between feat, dev and main
@@ -69,7 +81,6 @@ return {
     "lukas-reineke/virt-column.nvim",
     event = { "BufReadPost", "BufNewFile" },
     config = function()
-      vim.opt.colorcolumn = "80"
       require("virt-column").setup()
       vim.api.nvim_create_autocmd("ColorScheme", {
         callback = function()
@@ -110,5 +121,5 @@ return {
   -- diffview to see the shit in my code pass
   -- the best alternative to github interface here
   -- i just like this plugin, just without reason
-  { "sindrets/diffview.nvim", cmd = "DiffviewOpen" },
+  { "sindrets/diffview.nvim",        cmd = "DiffviewOpen" },
 }
