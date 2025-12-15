@@ -7,3 +7,9 @@
 # Credits
 
 1) Lazyvim starter https://github.com/LazyVim/starter as nvchad's starter was inspired by Lazyvim's . It made a lot of things easier!
+
+# Running this on Apple MacOS
+
+```bash
+$ brew install git lazygit fd ripgrep llvm go rust zig cmake
+```
