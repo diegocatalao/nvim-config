@@ -11,5 +11,14 @@
 # Running this on Apple MacOS
 
 ```bash
+$ brew install --cask iterm2 nvim
 $ brew install git lazygit fd ripgrep llvm go rust zig cmake
+$ brew install --cask font-jetbrains-mono-nerd-font
+```
+
+# To install it, of course
+```bash
+$ git clone https://github.com/NvChad/starter ~/.config/nvim
+$ # and then, run the nvim
+$ nvim
 ```
