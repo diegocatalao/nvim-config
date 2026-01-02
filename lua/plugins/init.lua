@@ -122,4 +122,14 @@ return {
   -- the best alternative to github interface here
   -- i just like this plugin, just without reason
   { "sindrets/diffview.nvim",        cmd = "DiffviewOpen" },
+  -- i really like this plugin because is the best to use to
+  -- replace my old codes into a new. however, i really dont
+  -- like this mapping keys using A-/
+  {
+    "numToStr/Comment.nvim",
+    event = "BufReadPost",
+    config = function()
+      require("Comment").setup()
+    end,
+  },
 }
