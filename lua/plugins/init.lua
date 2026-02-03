@@ -1,5 +1,14 @@
 return {
   { import = "nvchad.blink.lazyspec" },
+  {
+    "nvim-tree/nvim-tree.lua",
+    opts = {
+      filters = {
+        dotfiles = false,
+        git_ignored = false,
+      },
+    },
+  },
   -- i just want this to select one or more lines
   -- good for lazy minds like myself
   {
@@ -101,6 +110,9 @@ return {
       "nvim-treesitter/nvim-treesitter",
       lazy = false,
       branch = "master",
+      opts = {
+        ensure_installed = { "json" },
+      },
     },
   },
   -- automate code formating with conform
@@ -121,7 +133,17 @@ return {
   -- diffview to see the shit in my code pass
   -- the best alternative to github interface here
   -- i just like this plugin, just without reason
-  { "sindrets/diffview.nvim",        cmd = "DiffviewOpen" },
+  { "sindrets/diffview.nvim", cmd = "DiffviewOpen" },
+  {
+    "esensar/nvim-dev-container",
+    dependencies = { "nvim-treesitter/nvim-treesitter" },
+    cmd = { "DevcontainerStart", "DevcontainerAttach", "DevcontainerStop" },
+    keys = {
+      { "<leader>ds", "<cmd>DevcontainerStart<cr>", desc = "Devcontainer start" },
+      { "<leader>da", "<cmd>DevcontainerAttach<cr>", desc = "Devcontainer attach" },
+    },
+    opts = {},
+  },
   -- i really like this plugin because is the best to use to
   -- replace my old codes into a new. however, i really dont
   -- like this mapping keys using A-/
